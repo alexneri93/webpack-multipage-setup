@@ -13,3 +13,7 @@ https://html-validate.org/usage/index.html
 npm install media-query-plugin --save-dev
 
 LINT y test: npm install stylelint stylelint-no-unsupported-browser-features
+
+BABEL
+npm install --save-dev babel-loader @babel/preset-env @babel/core
+npm i core-js
