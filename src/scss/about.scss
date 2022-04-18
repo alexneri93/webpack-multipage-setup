@@ -1,0 +1,13 @@
+$base-color: "#fff";
+
+body{
+    color: $base-color;
+    will-change: transform
+}
+
+@media screen and (min-width: 756px){
+    body{
+        color: green;
+        font-size: 12px;
+    }
+}

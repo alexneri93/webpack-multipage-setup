@@ -1,0 +1,15 @@
+npm install webpack webpack-cli --save-dev
+npm install --save-dev mini-css-extract-plugin
+npm install css-minimizer-webpack-plugin --save-dev
+npm install sass-loader sass --save-dev (dart-sass)
+npm install --save-dev css-loader
+npm install --save-dev html-webpack-plugin
+
+npm install --save-dev html-validate-webpack-plugin
+npm i -g html-validate
+https://html-validate.org/usage/index.html
+
+
+npm install media-query-plugin --save-dev
+
+LINT y test: npm install stylelint stylelint-no-unsupported-browser-features

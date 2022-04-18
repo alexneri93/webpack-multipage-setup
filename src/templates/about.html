@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= htmlWebpackPlugin.options.title %></title>
+    
+    <% _.each(htmlWebpackPlugin.files.css, function(cssfile){ %>
+        <link rel="stylesheet" href="<%= cssfile %>">
+    <% }) %>
+    <% _.each(htmlWebpackPlugin.files.extracted.css, function(cssfile){ %>
+        <% if(_.some(htmlWebpackPlugin.options.chunks, (el) => _.includes(cssfile.file, el))){%>
+        <link rel="stylesheet" href="<%= cssfile.file %>" media="<%= cssfile.query %>">
+        <% } %>
+    <% }) %>
+    
+    <% _.each(htmlWebpackPlugin.files.js, function(jsfile){ %>
+        <script src="<%= jsfile %>" defer></script>
+    <% }) %>
+    <% _.each(htmlWebpackPlugin.files.extracted.js, function(jsfile){ %>
+        <% if(_.some(htmlWebpackPlugin.options.chunks, (el) => _.includes(jsfile.file, el))){%>
+            <script src="<%= jsfile.file %>" defer></script>
+        <% } %>
+    <% }) %>
+
+</head>
+<body>
+    <header>
+        <h1>About</h1>
+    </header>
+    <main>
+        <p>
+            Lorem ipsum dolor sit amet.<br>
+        </p>        
+    </main>
+    <footer>
+        All rights reserved.
+    </footer>
+</body>
+</html>
